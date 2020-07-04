@@ -1,0 +1,21 @@
+if [[ $# == 0  ]]; then
+ 	echo "ERROR: Need at least 1 arg"
+	exit
+fi
+
+	# Call pywal and gengtk
+wal -i $1
+gengtk
+
+
+	# Set wallpaper in nitrogen
+path=`readlink -f $1`
+
+cp ~/.config/nitrogen/bg-template.cfg ~/.config/nitrogen/bg-saved.cfg
+sed -i "s~XXX~$path~g"  ~/.config/nitrogen/bg-saved.cfg
+
+
+	# Update betterlockscreen
+mkdir ~/.config/ricer
+convert $path $path  +append ~/.config/ricer/betterlockscreen.jpg
+betterlockscreen -u ~/.config/ricer/betterlockscreen.jpg
