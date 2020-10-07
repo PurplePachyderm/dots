@@ -2,7 +2,9 @@
 
 ## About
 
-**[WIP]** Personal dotfiles repository.
+Personal dotfiles repository.
+
+## dotfiles
 
 Includes dotfiles for :
 
@@ -16,9 +18,12 @@ Includes dotfiles for :
 
 [i3spotifystatus](https://github.com/rpieja/i3spotifystatus) is required in `.i3/config`
 
+## scripts
 
 Place the content of `scripts` somewhere in your path.
-`ricer` script requires :
+The `ricer` script sets your wallpaper/lockscreen, then generates and apply a
+corresponding [pywal](https://github.com/dylanaraps/pywal) theme.
+It requires :
 - [betterlockscreen](https://github.com/pavanjadhaw/betterlockscreen)
 - [pywal](https://github.com/dylanaraps/pywal)
 - [oomox](https://github.com/themix-project/oomox)
@@ -30,4 +35,6 @@ Example setup 1 :
 ![Screenshot 1](./screenshots/screen1.png)
 
 Example setup 2 :
-![Screenshot 2](./screenshots/screen2.png)
+![Screenshot 2](./screenshots/screen3.png)
+
+(you can find more examples in the `screenshots` folder)

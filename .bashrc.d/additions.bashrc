@@ -11,7 +11,7 @@ cat ~/.cache/wal/sequences
 source ~/.cache/wal/colors-tty.sh
 
 
-	#Bash startup
+	#Bash splash screen
 neofetch
 
 
@@ -19,11 +19,12 @@ neofetch
 
 #Misc
 alias please="sudo"
-alias update="sudo pacman -Syyu"
+alias upacman="sudo pacman -Syyu"
+alias upamac="sudo pamac -update"
+
 alias brightness="xrandr --output DP-4 --brightness"
 alias cl="clear && neofetch"
 alias cpu-setfreq="sudo cpupower frequency-set -g performance"
-
 
 #ls
 alias ll="ls -l"
