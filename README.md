@@ -14,9 +14,13 @@ Includes dotfiles for :
 - [neofetch](https://github.com/dylanaraps/neofetch)
 - [nitrogen](https://wiki.archlinux.org/index.php/Nitrogen)
 - [rofi](https://github.com/davatorium/rofi)
-- [spicetify](https://github.com/khanhas/Spicetify) (uses [spicetify-themes](https://github.com/morpheusthewhite/spicetify-themes))
 
 [i3spotifystatus](https://github.com/rpieja/i3spotifystatus) is required in `.i3/config`
+
+Useful links for Spotify ricing :
+
+- [spicetify](https://github.com/khanhas/Spicetify)
+- [spicetify-themes](https://github.com/morpheusthewhite/spicetify-themes) (I use the Onepunch theme)
 
 ## scripts
 
@@ -35,6 +39,6 @@ Example setup 1 :
 ![Screenshot 1](./screenshots/screen1.png)
 
 Example setup 2 :
-![Screenshot 2](./screenshots/screen3.png)
+![Screenshot 2](./screenshots/screen4.png)
 
 (you can find more examples in the `screenshots` folder)
