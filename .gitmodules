@@ -1,0 +1,6 @@
+[submodule ".config/spicetify/spicetify-themes"]
+	path = .config/spicetify/spicetify-themes
+	url = https://github.com/morpheusthewhite/spicetify-themes/
+[submodule ".config/kitty/kitty-themes"]
+	path = .config/kitty/kitty-themes
+	url = https://github.com/dexpota/kitty-themes
