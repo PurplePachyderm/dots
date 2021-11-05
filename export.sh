@@ -15,4 +15,4 @@ cp -Tr xfce4-terminal ~/xfce4-terminal
 cp -Tr .doom.d ~/.doom.d
 
 # Spacevim config
-cp -Tr .SpaceVim.d ~/.doom.d
+cp -Tr .SpaceVim.d ~/.SpaceVim.d

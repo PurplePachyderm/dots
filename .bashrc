@@ -200,8 +200,20 @@ eval "$(starship init bash)"
 # Splash screen
 neofetch | lolcat
 
+
 # Aliases
 alias cl="clear && neofetch | lolcat"
+alias brightness="xrandr --output eDP-1 --brightness"
+alias please="sudo"
+
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+
+alias la="ls -a"
+alias ll="ls -l"
+alias lla="ls -la"
 
 # PATH
 export PATH=$PATH:~/.emacs.d/bin
