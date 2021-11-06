@@ -200,11 +200,11 @@ eval "$(starship init bash)"
 # Splash screen
 neofetch | lolcat
 
-
 # Aliases
 alias cl="clear && neofetch | lolcat"
 alias brightness="xrandr --output eDP-1 --brightness"
 alias please="sudo"
+alias enw="emacs -nw"
 
 alias ..="cd .."
 alias ...="cd ../.."
