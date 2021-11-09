@@ -216,11 +216,20 @@ alias ll="ls -l"
 alias lla="ls -la"
 
 # PATH
+
 export PATH=$PATH:~/.emacs.d/bin
+
 export PATH=$PATH:/opt/scorep/bin
+export PATH=$PATH:/opt/cubegui/bin
+
 export PATH=$PATH:/opt/cuda/nsight_compute
 export PATH=$PATH:/opt/cuda/nsight_systems/bin
-export PATH=$PATH:/opt/cubegui/bin
+
+MANPATH=$MANPATH:/opt/nvidia/hpc_sdk/Linux_x86_64/21.9/compilers/man; export MANPATH
+PATH=/opt/nvidia/hpc_sdk/Linux_x86_64/21.9/compilers/bin:$PATH; export PATH
+export PATH=/opt/nvidia/hpc_sdk/Linux_x86_64/21.9/comm_libs/mpi/bin:$PATH
+export MANPATH=$MANPATH:/opt/nvidia/hpc_sdk/Linux_x86_64/21.9/comm_libs/mpi/man
+
 
 # Other
 export SCOREP_CUDA_ENABLE=yes
