@@ -225,11 +225,5 @@ export PATH=$PATH:/opt/cubegui/bin
 export PATH=$PATH:/opt/cuda/nsight_compute
 export PATH=$PATH:/opt/cuda/nsight_systems/bin
 
-MANPATH=$MANPATH:/opt/nvidia/hpc_sdk/Linux_x86_64/21.9/compilers/man; export MANPATH
-PATH=/opt/nvidia/hpc_sdk/Linux_x86_64/21.9/compilers/bin:$PATH; export PATH
-export PATH=/opt/nvidia/hpc_sdk/Linux_x86_64/21.9/comm_libs/mpi/bin:$PATH
-export MANPATH=$MANPATH:/opt/nvidia/hpc_sdk/Linux_x86_64/21.9/comm_libs/mpi/man
-
-
 # Other
-export SCOREP_CUDA_ENABLE=yes
+export SCOREP_CUDA_ENABLE=runtime,driver,kernel,kernel_serial,kernel_counter,memcpy,sync,idle,pure_idle,gpumemusage,references,dontflushatexit
