@@ -226,5 +226,5 @@ export PATH=$PATH:/opt/cuda/nsight_compute
 export PATH=$PATH:/opt/cuda/nsight_systems/bin
 
 # Other
-export SCOREP_CUDA_ENABLE=runtime,driver,kernel,kernel_serial,kernel_counter,memcpy,sync,idle,pure_idle,gpumemusage,references,dontflushatexit
+export SCOREP_CUDA_ENABLE=runtime,driver,kernel_serial,kernel_counter,memcpy,sync,idle,pure_idle,gpumemusage,references,dontflushatexit
 export PYTHONPATH=${PYTHONPATH}:/usr/local/lib/python3.9/site-packages
