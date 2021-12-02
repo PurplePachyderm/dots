@@ -54,3 +54,11 @@
 ;; they are implemented.
 
 (setq-default tab-always-indent t)
+(setq-default indent-tabs-mode t)
+(setq custom-tab-width 4)
+
+;; Making electric-indent behave sanely
+(setq-default electric-indent-inhibit t)
+;; Make the backspace properly erase the tab instead of
+;; removing 1 space at a time.
+(setq backward-delete-char-untabify-method 'hungry)
