@@ -219,4 +219,4 @@ alias lla="ls -la"
 export PATH=$PATH:~/.emacs.d/bin
 
 # Source machine specific script
-source .machine-specific.sh
+source ~/.machine-specific.sh
