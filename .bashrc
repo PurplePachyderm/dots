@@ -216,15 +216,7 @@ alias ll="ls -l"
 alias lla="ls -la"
 
 # PATH
-
 export PATH=$PATH:~/.emacs.d/bin
 
-export PATH=$PATH:/opt/scorep/bin
-export PATH=$PATH:/opt/cubegui/bin
-
-export PATH=$PATH:/opt/cuda/nsight_compute
-export PATH=$PATH:/opt/cuda/nsight_systems/bin
-
-# Other
-export SCOREP_CUDA_ENABLE=runtime,driver,kernel_serial,kernel_counter,memcpy,sync,idle,pure_idle,gpumemusage,references,dontflushatexit
-export PYTHONPATH=${PYTHONPATH}:/usr/local/lib/python3.9/site-packages
+# Source machine specific script
+source .machine-specific.sh

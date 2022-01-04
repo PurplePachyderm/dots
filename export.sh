@@ -4,6 +4,7 @@
 
 # .bashrc
 cp .bashrc ~
+touch ~/.machine-specific.sh
 
 # config folder
 cp -Tr .config ~/.config
