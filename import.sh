@@ -21,8 +21,5 @@ cp -Tr ~/.config/cava .config/cava
 # Doom Emacs
 cp -Tr ~/.doom.d .doom.d
 
-# Spacevim config
-cp -Tr ~/.SpaceVim.d .SpaceVim.d
-
 # GTK themes
 cp -Tr ~/.themes .themes

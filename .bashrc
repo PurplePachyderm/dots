@@ -217,6 +217,13 @@ alias lla="ls -la"
 
 # PATH
 export PATH=$PATH:~/.emacs.d/bin
+export PATH=$PATH:/opt/cuda/nsight_systems/bin
+export PATH=$PATH:/opt/cuda/nsight_compute
+export PATH=$PATH:/opt/intel/oneapi/compiler/latest/linux/bin
+
+# Intel libs
+#export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/intel/oneapi/compiler/2022.0.2/linux/compiler/lib/intel64_lin
+#export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/intel/oneapi/mkl/2022.0.2/lib/intel64
 
 # Source machine specific script
 source ~/.machine-specific.sh

@@ -11,7 +11,7 @@
 # --> to update this run the following command (will backup existing setup file)
 # wget --backups=1 https://raw.githubusercontent.com/endeavouros-team/endeavouros-i3wm-setup/main/.config/i3/config -P ~/.config/i3/
 #
-# Endeavouros-i3 config file
+# This a modified version of Endeavouros-i3 config file
 # Source for complete framework of our i3 config and theming here: https://github.com/endeavouros-team/endeavouros-i3wm-setup
 # EndeavourOS wiki holds some Information also: https://discovery.endeavouros.com/window-tiling-managers/i3-wm/
 # Please see http://i3wm.org/docs/userguide.html for the official i3 reference!
@@ -128,7 +128,7 @@ mode "resize" {
 	bindsym Shift+l resize shrink height 10 px or 10 ppt
 	bindsym Shift+ntilde resize grow width 10 px or 10 ppt
 
-	# same bindings, but for the arrow keys
+# same bindings, but for the arrow keys
 	bindsym Shift+Left resize shrink width 10 px or 10 ppt
 	bindsym Shift+Down resize grow height 10 px or 10 ppt
 	bindsym Shift+Up resize shrink height 10 px or 10 ppt
@@ -239,7 +239,7 @@ bindsym XF86AudioLowerVolume exec amixer -D pulse sset Master 5%- && pkill -RTMI
 #mute
 #bindsym XF86AudioMute exec pamixer -t && dunstify -h string:x-dunst-stack-tag:mute mute: $(pamixer --get-mute)!
 
-# gradular volume control
+# granular volume control
 bindsym $mod+XF86AudioRaiseVolume exec amixer -D pulse sset Master 1%+ && pkill -RTMIN+1 i3blocks
 bindsym $mod+XF86AudioLowerVolume exec amixer -D pulse sset Master 1%- && pkill -RTMIN+1 i3blocks
 
@@ -258,10 +258,10 @@ bindsym $mod+p exec /usr/local/bin/switch-audio-port
 
 # App shortcuts
 bindsym $mod+F1 exec firefox
-bindsym $mod+F2 exec xfce4-terminal -e ranger
-bindsym $mod+Shift+F2 exec thunar
+bindsym $mod+F2 exec thunar
+bindsym $mod+Shift+F2 exec xfce4-terminal -e ranger
 bindsym $mod+F3 exec emacs
-bindsym $mod+Shift+F3 exec atom
+bindsym $mod+Shift+F3 exec exfce4-terminal -emacs -nw
 
 bindsym $mod+F4 exec spotify
 bindsym $mod+F5 exec pavucontrol
@@ -330,9 +330,6 @@ exec --no-startup-id dex -a -s /etc/xdg/autostart/:~/.config/autostart/
 # num lock activated
 #exec --no-startup-id numlockx on
 
-# start conky:
-#exec_always --no-startup-id conky
-
 # start a script to setup displays
 # uncomment the next line, use arandr to setup displays and save the file as monitor:
 exec --no-startup-id ~/.screenlayout/monitor.sh
@@ -348,8 +345,10 @@ exec --no-startup-id picom -CGb
 exec --no-startup-id nm-applet
 
 # set wallpaper
-exec --no-startup-id nitrogen --restore
+#exec --no-startup-id nitrogen --restore
 #exec --no-startup-id feh --bg-fill /usr/share/endeavouros/backgrounds/endeavouros_i3.png
+#exec --no-startup-id "kill $(pgrep -f /usr/local/bin/wallpapersetter);/usr/local/bin/wallpapersetter"
+#exec --no-startup-id /usr/local/bin/wallpapersetter
 
 #set powersavings for display:
 exec --no-startup-id xset s 480 dpms 600 600 600
@@ -394,10 +393,10 @@ set $yellowbrown	#e1b700
 
 # define colors for windows:
 #class		        	border		bground		text		indicator	child_border
-client.focused		    $lightblue	$darkblue	$white		$purple		$mediumgrey
-client.unfocused	    $darkblue	$darkblue	$grey		$purple		$darkgrey
-client.focused_inactive	$darkblue	$darkblue	$grey		$purple		$black
-client.urgent		    $urgentred	$urgentred	$white		$purple		$yellowbrown
+client.focused		    $lightblue	$darkblue	$white		#202020		$mediumgrey
+client.unfocused	    $darkblue	$darkblue	$grey		#202020		$darkgrey
+client.focused_inactive	    $darkblue	$darkblue	$grey		#202020		$black
+client.urgent		    $urgentred	$urgentred	$white		#202020		$yellowbrown
 
 
 ############################################
@@ -424,13 +423,14 @@ bar {
 
 	colors {
 		separator          $purple
-		background         $darkgrey
+		#background        $darkgrey
+		background         #202020
 		statusline         $white
-		#                   border          bg	        txt	        indicator
-		focused_workspace	$mediumgrey	   	$grey		$darkgrey	$purple
-		active_workspace	$lightblue      	$mediumgrey	$darkgrey	$purple
-		inactive_workspace	$darkgrey   		$darkgrey	$grey		$purple
-		urgent_workspace	$urgentred	    	$urgentred	$white		$purple
+		#                       border                  bg	        txt	        indicator
+		focused_workspace	$mediumgrey	   	$grey		$darkgrey	$white
+		active_workspace	$lightblue      	$mediumgrey	$darkgrey	$white
+		inactive_workspace	$darkgrey   		#202020		$white
+		urgent_workspace	$urgentred	    	$urgentred	$white		$white
 	}
 }
 
